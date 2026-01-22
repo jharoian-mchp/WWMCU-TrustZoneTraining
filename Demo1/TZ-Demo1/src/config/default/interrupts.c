@@ -78,11 +78,15 @@ void __attribute__((optimize("-O1"), long_call, noreturn, used))Dummy_Handler(vo
 }
 
 /* MISRAC 2023 deviation block start */
-/* MISRA C-2023 Rule 8.6 deviated 3 times.  Deviation record ID -  H3_MISRAC_2023_R_8_6_DR_1 */
+/* MISRA C-2023 Rule 8.6 deviated 7 times.  Deviation record ID -  H3_MISRAC_2023_R_8_6_DR_1 */
 /* Device vectors list dummy definition*/
 extern void SVCall_Handler             ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
 extern void PendSV_Handler             ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
 extern void SysTick_Handler            ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
+extern void SERCOM2_0_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
+extern void SERCOM2_1_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
+extern void SERCOM2_2_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
+extern void SERCOM2_OTHER_Handler      ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
 
 
 /* MISRAC 2023 deviation block end */
@@ -92,7 +96,7 @@ extern void SysTick_Handler            ( void ) __attribute__((weak, alias("Dumm
 
 
 /* MISRAC 2023 deviation block start */
-/* MISRA C-2023 Rule 2.8 deviated 3 times.  Deviation record ID -  H3_MISRAC_2023_R_2_8_DR_1 */
+/* MISRA C-2023 Rule 2.8 deviated 7 times.  Deviation record ID -  H3_MISRAC_2023_R_2_8_DR_1 */
 
 __attribute__ ((section(".vectors"), used))
 const H3DeviceVectors exception_table=
@@ -106,6 +110,10 @@ const H3DeviceVectors exception_table=
     .pfnSVCall_Handler             = SVCall_Handler,
     .pfnPendSV_Handler             = PendSV_Handler,
     .pfnSysTick_Handler            = SysTick_Handler,
+    .pfnSERCOM2_0_Handler          = SERCOM2_0_Handler,
+    .pfnSERCOM2_1_Handler          = SERCOM2_1_Handler,
+    .pfnSERCOM2_2_Handler          = SERCOM2_2_Handler,
+    .pfnSERCOM2_OTHER_Handler      = SERCOM2_OTHER_Handler,
 
 
 };

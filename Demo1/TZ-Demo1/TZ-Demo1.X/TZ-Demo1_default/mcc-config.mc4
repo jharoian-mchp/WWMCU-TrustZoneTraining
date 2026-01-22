@@ -11,13 +11,15 @@ modules:
 - evsys
 - nvmctrl
 - pm
+- sercom2
 - sercom3
+- stdio
 - stdio_s
 generatedFileHashHistoryMap:
 - file: ..\..\TZ-Demo1\src\config\default\PIC32CM5164LS00100.ld
   hash: 626c719a9f422ed961d5982885a0061795a3b41c9fbad861e5fdf1512f51cd01
 - file: ..\..\TZ-Demo1\src\config\default\definitions.h
-  hash: 27e44caf98d50246ac251baadfd8f53cd4db7b79dbfff82744e79124939c3736
+  hash: 6762246f908430844b6f97b1557a40674954b62257d10f0f5d4757a5a0837eb5
 - file: ..\..\TZ-Demo1\src\config\default\device.h
   hash: 3ce93fb284b6a38dce57375b83037b96eaca649a3c1c89c9394f79e3d708e67a
 - file: ..\..\TZ-Demo1\src\config\default\device_cache.h
@@ -27,9 +29,9 @@ generatedFileHashHistoryMap:
 - file: ..\..\TZ-Demo1\src\config\default\exceptions.c
   hash: d1567a190561858cc1cb7e796cf1a29720e52b9799bbd88b087993d8539e137f
 - file: ..\..\TZ-Demo1\src\config\default\initialization.c
-  hash: c2fb10e45e1f0ce75964ce693011e7c619ff2371176f967e67c75c37cc9bd16c
+  hash: 29f6f124abca82533896af27b7c596b28eb5fb5b92eaf2fc4577fd83cb5c7832
 - file: ..\..\TZ-Demo1\src\config\default\interrupts.c
-  hash: 531a2984bca33c0d6446212b6a3f89edf828f88f7afc3e51a5ba04c6af8c248c
+  hash: 04ed9d8e81851704ffd6788907c50e5096f5ed64872568d176f0d8abe0a46056
 - file: ..\..\TZ-Demo1\src\config\default\interrupts.h
   hash: 6c483ae3f5e6b7d94c52e2459b77e7ce20ad261afe8ee1413622d9ab38d745b1
 - file: ..\..\TZ-Demo1\src\config\default\libc_syscalls.c
@@ -41,13 +43,23 @@ generatedFileHashHistoryMap:
 - file: ..\..\TZ-Demo1\src\config\default\peripheral\port\plib_port.c
   hash: c5272f06ad2d2ad55fd87b491edb908257f7ea7edcb721940d922743d3b41da6
 - file: ..\..\TZ-Demo1\src\config\default\peripheral\port\plib_port.h
-  hash: fa8cb774537c2f0f86fd7e08a66488f5b04c14a1b57393130bed7c835daa7189
+  hash: 323c0da402e0eb3653ca32c9f32d3e94ac78aecc14ae358c1d6ddba5fd5821c0
+- file: ..\..\TZ-Demo1\src\config\default\peripheral\sercom\usart\plib_sercom2_usart.c
+  hash: 7d589e4d66166087219dec4c8a7012ae9b39c17ad23f0c6a635cb7ea061f0ca9
+- file: ..\..\TZ-Demo1\src\config\default\peripheral\sercom\usart\plib_sercom2_usart.h
+  hash: a0d35d03c527d1fb9c99d575f99b91a9d1d49d345b20cacee95c2aec45c0d7cb
+- file: ..\..\TZ-Demo1\src\config\default\peripheral\sercom\usart\plib_sercom_usart_common.h
+  hash: 3653b66472c558c50f7037a1dd25d2678e9a13aa718f3c53a2195e6f3919ea48
+- file: ..\..\TZ-Demo1\src\config\default\peripheral\systick\plib_systick.c
+  hash: f64a15f6e5d1d288debe9bfc0146a05a955925dc1f3160e3de6b8cee04eaeaec
+- file: ..\..\TZ-Demo1\src\config\default\peripheral\systick\plib_systick.h
+  hash: 43e550acb1089f7ee29aedf3097aa66ce3e5a25c03b9794c8f230fb1dbd516dd
 - file: ..\..\TZ-Demo1\src\config\default\pin_configurations.csv
-  hash: 47298c1e2d1cf8436e20ca5bac2d3de5212ee0e8fd05e25c94035a6b30026cf6
+  hash: 8f65ec8cb145d5937dce5ac0f2223b7f944c989096b432e0d6fc3a8e1003820f
 - file: ..\..\TZ-Demo1\src\config\default\startup_xc32.c
   hash: 3aa1360f333b564211c35f641c7327c2111e11aa633bd02ec5a0be9466b1df04
 - file: ..\..\TZ-Demo1\src\config\default\stdio\xc32_monitor.c
-  hash: 858f8710d4287200a5ee7f3b3ad7c24f505aed9c05c16956ab0ff9f7bb162a6a
+  hash: 1395dbc052b1c3c61d798c93f81efa8bc498027c4f6de749df5e4c06dbee4d31
 - file: ..\..\TZ-Demo1\src\config\default\toolchain_specifics.h
   hash: a4f1774c6f1f8c6cd522567536c9e9d75ca63259b868015ac9b0fb0aeeffe1f4
 - file: ..\..\TZ-Demo1\src\main.c
@@ -241,15 +253,15 @@ generatedFileHashHistoryMap:
 - file: ..\..\TZ-Demo1_secure\src\config\default\exceptions.c
   hash: 2c3b450b059db8a8839fdf58893f4c471cb9254fbf22dd5a210c6f358b2776f4
 - file: ..\..\TZ-Demo1_secure\src\config\default\initialization.c
-  hash: ae109e5d92daf9f6f2acac6fcedfd04e3b51589a6e39208b4d191caa64dd6649
+  hash: cd98f06e5a2ff8b2b6b712c16cfee477b46e6ee36db75bd09e0a47a927de3f31
 - file: ..\..\TZ-Demo1_secure\src\config\default\interrupts.c
-  hash: b692170409c793dc539890eee6a72d0bf18c82d072bbe2411e4b479ca2a50412
+  hash: 62e711905dfd579b0df69c035bbb24eed3922395ed1f28bfa1206e6ea79fd9d5
 - file: ..\..\TZ-Demo1_secure\src\config\default\interrupts.h
   hash: dfa0dc9913824f4bd77858e8fea7f6878ff67ecb87878202b2bc11789fd8e248
 - file: ..\..\TZ-Demo1_secure\src\config\default\libc_syscalls.c
   hash: c9afc1b1257829415a1a6746ce3744f0a768b339d59fff2ab3ca1fab58b2a916
 - file: ..\..\TZ-Demo1_secure\src\config\default\peripheral\clock\plib_clock.c
-  hash: e8faba552649a4f510bd681cbe2162dab55dd89e294d982591278083fb8f3e7d
+  hash: da29317a9cf9ed3f306d8bcbeb965b17e74bd3f06f5f84b78f82ed1de8b6bd0f
 - file: ..\..\TZ-Demo1_secure\src\config\default\peripheral\clock\plib_clock.h
   hash: 48855ddfcdc10b43a141321e043ab6ad2eb994b09fdba511f17f1d93911c536c
 - file: ..\..\TZ-Demo1_secure\src\config\default\peripheral\evsys\plib_evsys.c
@@ -269,9 +281,9 @@ generatedFileHashHistoryMap:
 - file: ..\..\TZ-Demo1_secure\src\config\default\peripheral\pm\plib_pm.h
   hash: 027462b9369dc5bb8873f96fc3b5ca69ceaf3bd205be7246e58a093b16ee633c
 - file: ..\..\TZ-Demo1_secure\src\config\default\peripheral\port\plib_port.c
-  hash: 847f34e2ad274fe83cd2ce8796c26241d8301e26c9189576c2f248757ba972f5
+  hash: 00d2b907c8463b8366fb390febce52d99995e6a31050552d8bb1181226b36547
 - file: ..\..\TZ-Demo1_secure\src\config\default\peripheral\port\plib_port.h
-  hash: 4c9f7a3a8b9a086d40532f8541499fbb3903d4510678489230e271e64c230e14
+  hash: b5c9cab314f789c876b8f4e3ee50daa9d762aed94ea164728c5b3e7992578d39
 - file: ..\..\TZ-Demo1_secure\src\config\default\peripheral\sercom\usart\plib_sercom3_usart.c
   hash: a052ab8e694036b9b0332562551119d7b7b4e11dfb9d2283251970636359fcd0
 - file: ..\..\TZ-Demo1_secure\src\config\default\peripheral\sercom\usart\plib_sercom3_usart.h

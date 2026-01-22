@@ -65,6 +65,15 @@
 // *****************************************************************************
 // *****************************************************************************
 
+/*** Macros for NS_LED1 pin ***/
+#define NS_LED1_Set()               (PORT_REGS->GROUP[2].PORT_OUTSET = 1 << 27)
+#define NS_LED1_Clear()             (PORT_REGS->GROUP[2].PORT_OUTCLR = 1 << 27)
+#define NS_LED1_Toggle()            (PORT_REGS->GROUP[2].PORT_OUTTGL = 1 << 27)
+#define NS_LED1_OutputEnable()      (PORT_REGS->GROUP[2].PORT_DIRSET = 1 << 27)
+#define NS_LED1_InputEnable()       (PORT_REGS->GROUP[2].PORT_DIRCLR = 1 << 27)
+#define NS_LED1_Get()               (((PORT_REGS->GROUP[2].PORT_IN >> 27)) & 0x01)
+#define NS_LED1_PIN                  PORT_PIN_PC27
+
 // *****************************************************************************
 /* PORT Group
 
@@ -119,6 +128,8 @@ typedef enum
 
 typedef enum
 {
+    /* PC27 pin */
+    PORT_PIN_PC27 = 91,
     /* This element should not be used in any of the PORT APIs.
      * It will be used by other modules or application to denote that none of
      * the PORT Pin is used */

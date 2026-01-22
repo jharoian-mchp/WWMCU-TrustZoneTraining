@@ -1,18 +1,17 @@
 /*******************************************************************************
- Debug Console Source file
+  Interface definition of SYSTICK PLIB.
 
   Company:
     Microchip Technology Inc.
 
   File Name:
-    xc32_monitor.c
+    plib_systick.h
 
   Summary:
-    debug console Source File
+    Interface definition of the System Timer Plib (SYSTICK).
 
   Description:
-    None
-
+    This file defines the interface for the SYSTICK Plib.
 *******************************************************************************/
 
 /*******************************************************************************
@@ -37,37 +36,43 @@
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
+
+#ifndef PLIB_SYSTICK_H    // Guards against multiple inclusion
+#define PLIB_SYSTICK_H
+
+#include <stdint.h>
+#include <stdbool.h>
 #include <stddef.h>
-#include "definitions.h"
 
-extern int read(int handle, void *buffer, unsigned int len);
-extern int write(int handle, void * buffer, size_t count);
+#ifdef __cplusplus // Provide C++ Compatibility
+    extern "C" {
+#endif
 
 
-int read(int handle, void *buffer, unsigned int len)
-{
-    int nChars = 0;
-    bool success = false;
-    if ((handle == 0)  && (len > 0U))
-    {
-        do
-        {
-            success = SERCOM2_USART_Read(buffer, 1);
-        }while( !success);
-        nChars = 1;
-    }
-    return nChars;
-}
+// *****************************************************************************
+// *****************************************************************************
+// Section: Interface
+// *****************************************************************************
+// *****************************************************************************
 
-int write(int handle, void * buffer, size_t count)
-{
-   bool success = false;
-   if (handle == 1)
-   {
-       do
-       {
-           success = SERCOM2_USART_Write(buffer, count);
-       }while( !success);
-   }
-   return (int)count;
-}
+#define SYSTICK_FREQ   48000000U
+
+
+/***************************** SYSTICK API *******************************/
+void SYSTICK_TimerInitialize ( void );
+void SYSTICK_TimerRestart ( void );
+void SYSTICK_TimerStart ( void );
+void SYSTICK_TimerStop ( void );
+void SYSTICK_TimerPeriodSet ( uint32_t period );
+uint32_t SYSTICK_TimerPeriodGet ( void );
+uint32_t SYSTICK_TimerCounterGet ( void );
+uint32_t SYSTICK_TimerFrequencyGet ( void );
+void SYSTICK_DelayMs ( uint32_t delay_ms );
+void SYSTICK_DelayUs ( uint32_t delay_us );
+
+bool SYSTICK_TimerPeriodHasExpired(void);
+#ifdef __cplusplus // Provide C++ Compatibility
+ }
+#endif
+
+#endif

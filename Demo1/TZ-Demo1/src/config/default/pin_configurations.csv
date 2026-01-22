@@ -55,11 +55,11 @@ Pin Number,Pin ID,Custom Name,Function,Mode, Direction,Latch,Pull Up,Pull Down,D
 66,PB18,,Available,,,,,,NORMAL
 67,PB19,,Available,,,,,,NORMAL
 68,PB20,S_UART_Tx,SERCOM3_PAD0,Digital,High Impedance,n/a,No,No,NORMAL
-69,PB21,S_UART_Rx,SERCOM3_PAD1,Digital,High Impedance,n/a,No,No,NORMAL
+69,PB21,S_UART_Rx,SERCOM3_PAD1,Digital,High Impedance,n/a,Yes,No,NORMAL
 70,PA20,,Available,,,,,,NORMAL
 71,PA21,,Available,,,,,,NORMAL
-72,PA22,,Available,,,,,,NORMAL
-73,PA23,,Available,,,,,,NORMAL
+72,PA22,NS_UART_Tx,SERCOM2_PAD0,Digital,High Impedance,n/a,No,No,NORMAL
+73,PA23,NS_UART_Rx,SERCOM2_PAD1,Digital,High Impedance,n/a,Yes,No,NORMAL
 74,PA24,,Available,,,,,,NORMAL
 75,PA25,,Available,,,,,,NORMAL
 78,PB22,,Available,,,,,,NORMAL
@@ -69,7 +69,7 @@ Pin Number,Pin ID,Custom Name,Function,Mode, Direction,Latch,Pull Up,Pull Down,D
 82,PC24,,Available,,,,,,NORMAL
 83,PC25,,Available,,,,,,NORMAL
 84,PC26,,Available,,,,,,NORMAL
-85,PC27,,Available,,,,,,NORMAL
+85,PC27,NS_LED1,GPIO,Digital,Out,High,,,NORMAL
 86,PC28,,Available,,,,,,NORMAL
 93,PA30,,Available,,,,,,NORMAL
 94,PA31,,Available,,,,,,NORMAL

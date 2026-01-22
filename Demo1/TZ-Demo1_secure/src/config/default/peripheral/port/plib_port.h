@@ -82,6 +82,14 @@
 #define S_UART_Rx_Get()               (((PORT_SEC_REGS->GROUP[1].PORT_IN >> 21U)) & 0x01U)
 #define S_UART_Rx_PIN                  PORT_PIN_PB21
 
+/*** Macros for NS_UART_Tx pin ***/
+#define NS_UART_Tx_Get()               (((PORT_SEC_REGS->GROUP[0].PORT_IN >> 22U)) & 0x01U)
+#define NS_UART_Tx_PIN                  PORT_PIN_PA22
+
+/*** Macros for NS_UART_Rx pin ***/
+#define NS_UART_Rx_Get()               (((PORT_SEC_REGS->GROUP[0].PORT_IN >> 23U)) & 0x01U)
+#define NS_UART_Rx_PIN                  PORT_PIN_PA23
+
 // *****************************************************************************
 /* PORT Group
 
@@ -296,8 +304,6 @@ typedef enum
     PORT_PIN_PC25 = 89U,
     /* PC26 pin */
     PORT_PIN_PC26 = 90U,
-    /* PC27 pin */
-    PORT_PIN_PC27 = 91U,
     /* PC28 pin */
     PORT_PIN_PC28 = 92U,
     /* PA30 pin */
