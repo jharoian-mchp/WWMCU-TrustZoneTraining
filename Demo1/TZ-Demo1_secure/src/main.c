@@ -26,6 +26,9 @@
 #include <stdbool.h>                    // Defines true
 #include <stdlib.h>                     // Defines EXIT_FAILURE
 #include "definitions.h"                // SYS function prototypes
+#include <stdio.h>
+
+#include "ansicolor.h"
 
 /* typedef for non-secure callback functions */
 typedef void (*funcptr_void) (void) __attribute__((cmse_nonsecure_call));
@@ -44,6 +47,8 @@ int main ( void )
     /* Initialize all modules */
     SYS_Initialize ( NULL );
 
+    printf(ANSI_BK_RED "[Reset]" ANSI_BK_BLACK "\n\r");
+    
     if (msp_ns != 0xFFFFFFFF)
     {
         /* Set non-secure main stack (MSP_NS) */
@@ -61,6 +66,7 @@ int main ( void )
     while ( true )
     {
         S_LED0_Toggle();
+        printf("S_LED0 Toggle\n\r");
         SYSTICK_DelayMs(500);
     }
 
