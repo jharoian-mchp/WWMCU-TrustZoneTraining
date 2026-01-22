@@ -33,7 +33,7 @@ generatedFileHashHistoryMap:
 - file: ..\..\TZ-Demo1\src\config\default\interrupts.c
   hash: 04ed9d8e81851704ffd6788907c50e5096f5ed64872568d176f0d8abe0a46056
 - file: ..\..\TZ-Demo1\src\config\default\interrupts.h
-  hash: 6c483ae3f5e6b7d94c52e2459b77e7ce20ad261afe8ee1413622d9ab38d745b1
+  hash: 3fdca8049db19c4afa0e03f96acf1508f03ee7f3860eebee7e174fe53f31cc5d
 - file: ..\..\TZ-Demo1\src\config\default\libc_syscalls.c
   hash: c9afc1b1257829415a1a6746ce3744f0a768b339d59fff2ab3ca1fab58b2a916
 - file: ..\..\TZ-Demo1\src\config\default\peripheral\nvic\plib_nvic.c
@@ -255,9 +255,9 @@ generatedFileHashHistoryMap:
 - file: ..\..\TZ-Demo1_secure\src\config\default\initialization.c
   hash: cd98f06e5a2ff8b2b6b712c16cfee477b46e6ee36db75bd09e0a47a927de3f31
 - file: ..\..\TZ-Demo1_secure\src\config\default\interrupts.c
-  hash: 62e711905dfd579b0df69c035bbb24eed3922395ed1f28bfa1206e6ea79fd9d5
+  hash: 0f043da31058bf51edfceb90ca2654907613cfdcc4adc8eb941d9e3951944017
 - file: ..\..\TZ-Demo1_secure\src\config\default\interrupts.h
-  hash: dfa0dc9913824f4bd77858e8fea7f6878ff67ecb87878202b2bc11789fd8e248
+  hash: b4dd0ce5d3e62a422c995a0846d00a8df0ced7850bfb1bb9917cbac4df94f18d
 - file: ..\..\TZ-Demo1_secure\src\config\default\libc_syscalls.c
   hash: c9afc1b1257829415a1a6746ce3744f0a768b339d59fff2ab3ca1fab58b2a916
 - file: ..\..\TZ-Demo1_secure\src\config\default\peripheral\clock\plib_clock.c
@@ -291,9 +291,9 @@ generatedFileHashHistoryMap:
 - file: ..\..\TZ-Demo1_secure\src\config\default\peripheral\sercom\usart\plib_sercom_usart_common.h
   hash: 3653b66472c558c50f7037a1dd25d2678e9a13aa718f3c53a2195e6f3919ea48
 - file: ..\..\TZ-Demo1_secure\src\config\default\peripheral\systick\plib_systick.c
-  hash: 9c6b6f89906253360f35774e95bd91328b22b35bef37fe60fe53ce8b9ce3b0a0
+  hash: 13df7b3b0be0749b01ae71f387486c6749afb93e09f0f61a237e0201445c95da
 - file: ..\..\TZ-Demo1_secure\src\config\default\peripheral\systick\plib_systick.h
-  hash: 43e550acb1089f7ee29aedf3097aa66ce3e5a25c03b9794c8f230fb1dbd516dd
+  hash: 545ac922723aa3bdb6dac6c7665f794cd74820c811a629e385b6dcc8a82cdc67
 - file: ..\..\TZ-Demo1_secure\src\config\default\startup_xc32.c
   hash: 3aa1360f333b564211c35f641c7327c2111e11aa633bd02ec5a0be9466b1df04
 - file: ..\..\TZ-Demo1_secure\src\config\default\stdio\xc32_monitor.c

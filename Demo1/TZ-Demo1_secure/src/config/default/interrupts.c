@@ -75,7 +75,6 @@ void __attribute__((optimize("-O1"),section(".text.Dummy_Handler"),long_call, no
 /* Device vectors list dummy definition*/
 extern void SVCall_Handler             ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
 extern void PendSV_Handler             ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
-extern void SysTick_Handler            ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
 extern void SYSTEM_Handler             ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
 extern void WDT_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
 extern void RTC_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
