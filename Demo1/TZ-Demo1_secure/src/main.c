@@ -49,17 +49,17 @@ int main ( void )
 
     printf(ANSI_BK_RED "[Reset]" ANSI_BK_BLACK "\n\r");
     
-//    if (msp_ns != 0xFFFFFFFF)
-//    {
-//        /* Set non-secure main stack (MSP_NS) */
-//        __TZ_set_MSP_NS(msp_ns);
-//
-//        /* Get non-secure reset handler */
-//        NonSecure_ResetHandler = (funcptr_void)(*((uint32_t *)((TZ_START_NS) + 4U)));
-//
-//        /* Start non-secure state software application */
-//        NonSecure_ResetHandler();
-//    }
+    if (msp_ns != 0xFFFFFFFF)
+    {
+        /* Set non-secure main stack (MSP_NS) */
+        __TZ_set_MSP_NS(msp_ns);
+
+        /* Get non-secure reset handler */
+        NonSecure_ResetHandler = (funcptr_void)(*((uint32_t *)((TZ_START_NS) + 4U)));
+
+        /* Start non-secure state software application */
+        NonSecure_ResetHandler();
+    }
 
     SYSTICK_TimerStart();
         
