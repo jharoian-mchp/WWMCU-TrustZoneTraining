@@ -56,8 +56,12 @@ int main ( void )
         NonSecure_ResetHandler();
     }
 
+    SYSTICK_TimerStart();
+        
     while ( true )
     {
+        S_LED0_Toggle();
+        SYSTICK_DelayMs(500);
     }
 
     /* Execution should not come here during normal operation */
