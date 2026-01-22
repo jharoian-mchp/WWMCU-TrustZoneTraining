@@ -27,6 +27,7 @@
 #include <stdlib.h>                     // Defines EXIT_FAILURE
 #include "definitions.h"                // SYS function prototypes
 
+#include "ansicolor.h"
 
 // *****************************************************************************
 // *****************************************************************************
@@ -39,10 +40,16 @@ int main ( void )
     /* Initialize all modules */
     SYS_Initialize ( NULL );
 
+    printf( ANSI_WHITE ANSI_BK_RED "[Reset]" ANSI_RED ANSI_BK_BLACK "\n\r");
+    SYSTICK_TimerStart();
+    
     while ( true )
     {
         /* Maintain state machines of all polled MPLAB Harmony modules. */
         SYS_Tasks ( );
+        NS_LED1_Toggle();
+        printf("NS_LED1 Toggle\n\r");
+        SYSTICK_DelayMs(500);
     }
 
     /* Execution should not come here during normal operation */

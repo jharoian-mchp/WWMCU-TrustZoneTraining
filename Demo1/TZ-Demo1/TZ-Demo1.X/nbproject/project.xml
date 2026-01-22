@@ -10,7 +10,9 @@
             <make-dep-projects>
                 <make-dep-project>..\..\TZ-Demo1_secure\TZ-Demo1_secure.X</make-dep-project>
             </make-dep-projects>
-            <sourceRootList/>
+            <sourceRootList>
+                <sourceRootElem>../src</sourceRootElem>
+            </sourceRootList>
             <confList>
                 <confElem>
                     <name>default</name>

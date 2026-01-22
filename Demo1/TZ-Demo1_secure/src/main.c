@@ -47,7 +47,7 @@ int main ( void )
     /* Initialize all modules */
     SYS_Initialize ( NULL );
 
-    printf(ANSI_BK_RED "[Reset]" ANSI_BK_BLACK "\n\r");
+    printf( ANSI_BLACK ANSI_BK_GREEN "[Reset]" ANSI_GREEN ANSI_BK_BLACK "\n\r");
     
     if (msp_ns != 0xFFFFFFFF)
     {
