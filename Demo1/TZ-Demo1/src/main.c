@@ -55,7 +55,7 @@ int main ( void )
         secure_print("NS_LED1 Toggle");
         specialInfo = (uint32_t*) secure_getInformation();
         printf("Info Address: %x\n\r", specialInfo);
-        //printf("Info: %x\n\r", *specialInfo);
+        printf("Info: %x\n\r", *specialInfo);
         SYSTICK_DelayMs(500);
     }
 
