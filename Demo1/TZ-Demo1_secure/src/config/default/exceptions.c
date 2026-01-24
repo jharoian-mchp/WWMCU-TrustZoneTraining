@@ -48,6 +48,9 @@
 #include "interrupts.h"
 #include "definitions.h"
 
+#include "../../ansicolor.h"
+#include <stdio.h>
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: Exception Handling Routine
@@ -58,6 +61,7 @@
 
 void __attribute__((noreturn)) NonMaskableInt_Handler(void)
 {
+    printf( ANSI_BLACK ANSI_BK_GREEN "[NMI]" ANSI_GREEN ANSI_BK_BLACK "\n\r");
 #if defined(__DEBUG) || defined(__DEBUG_D) && defined(__XC32)
     __builtin_software_breakpoint();
 #endif
@@ -68,52 +72,57 @@ void __attribute__((noreturn)) NonMaskableInt_Handler(void)
 
 void __attribute__((noreturn)) HardFault_Handler(void)
 {
+    printf( ANSI_BLACK ANSI_BK_GREEN "[Hard Fault]" ANSI_GREEN ANSI_BK_BLACK "\n\r");
 #if defined(__DEBUG) || defined(__DEBUG_D) && defined(__XC32)
-   __builtin_software_breakpoint();
+    __builtin_software_breakpoint();
 #endif
-   while (true)
-   {
-   }
+    while (true)
+    {
+    }
 }
 
 void __attribute__((noreturn)) DebugMonitor_Handler(void)
 {
+    printf( ANSI_BLACK ANSI_BK_GREEN "[DebugMonitor]" ANSI_GREEN ANSI_BK_BLACK "\n\r");
 #if defined(__DEBUG) || defined(__DEBUG_D) && defined(__XC32)
-   __builtin_software_breakpoint();
+    __builtin_software_breakpoint();
 #endif
-   while (true)
-   {
-   }
+    while (true)
+    {
+    }
 }
 
 void __attribute__((noreturn)) MemoryManagement_Handler(void)
 {
+    printf( ANSI_BLACK ANSI_BK_GREEN "[MemoryManagement]" ANSI_GREEN ANSI_BK_BLACK "\n\r");
 #if defined(__DEBUG) || defined(__DEBUG_D) && defined(__XC32)
-   __builtin_software_breakpoint();
+    __builtin_software_breakpoint();
 #endif
-   while (true)
-   {
-   }
+    while (true)
+    {
+    }
 }
 
 void __attribute__((noreturn)) BusFault_Handler(void)
 {
+    printf( ANSI_BLACK ANSI_BK_GREEN "[BusFault]" ANSI_GREEN ANSI_BK_BLACK "\n\r");
 #if defined(__DEBUG) || defined(__DEBUG_D) && defined(__XC32)
-   __builtin_software_breakpoint();
+    __builtin_software_breakpoint();
 #endif
-   while (true)
-   {
-   }
+    while (true)
+    {
+    }
 }
 
 void __attribute__((noreturn)) UsageFault_Handler(void)
 {
+    printf( ANSI_BLACK ANSI_BK_GREEN "[UsageFault]" ANSI_GREEN ANSI_BK_BLACK "\n\r");
 #if defined(__DEBUG) || defined(__DEBUG_D) && defined(__XC32)
-   __builtin_software_breakpoint();
+    __builtin_software_breakpoint();
 #endif
-   while (true)
-   {
-   }
+    while (true)
+    {
+    }
 }
 /*******************************************************************************
  End of File

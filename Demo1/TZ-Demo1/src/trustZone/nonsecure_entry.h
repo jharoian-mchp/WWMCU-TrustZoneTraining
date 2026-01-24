@@ -51,5 +51,7 @@
 
 /* Non-secure callable functions */
 extern int secure_add(int x, int y);
+extern void secure_print(char* s);
+extern uintptr_t secure_getInformation(void);
 
 #endif /* NONSECURE_ENTRY_H_ */

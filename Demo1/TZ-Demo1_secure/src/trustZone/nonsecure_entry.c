@@ -39,9 +39,26 @@
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
  *******************************************************************************/
 // DOM-IGNORE-END
+#include <stdlib.h>
+#include <stdint.h>
+#include <stdio.h>
+
+extern void sp(char *s);
+
+static uint32_t info=0x1234;
 
 /* Non-secure callable (entry) function */
 int __attribute__((cmse_nonsecure_entry)) secure_add(int x, int y)
 {
     return (x + y);
+}
+
+void __attribute__((cmse_nonsecure_entry)) secure_print(char* s) {
+    if(s!=NULL) {
+        sp(s);
+    }
+}
+
+uintptr_t __attribute__((cmse_nonsecure_entry)) secure_getInformation(void) {
+    return (uintptr_t) &info;
 }

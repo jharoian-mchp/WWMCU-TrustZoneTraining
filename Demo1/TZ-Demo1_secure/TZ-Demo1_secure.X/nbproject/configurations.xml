@@ -214,6 +214,7 @@
         <itemPath>../src/trustZone/nonsecure_entry.c</itemPath>
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
+      <itemPath>../src/sp.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
